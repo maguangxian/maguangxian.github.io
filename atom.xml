@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maguangxian.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-08-26T06:15:46.657Z</updated>
+    <title>QAQ</title>
+    <updated>2020-08-26T06:17:36.776Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maguangxian.github.io"/>
     <link rel="self" href="https://maguangxian.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>一个蒟蒻</subtitle>
     <logo>https://maguangxian.github.io/images/avatar.png</logo>
     <icon>https://maguangxian.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, QAQ</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://maguangxian.github.io/post/hello-gridea/</id>
