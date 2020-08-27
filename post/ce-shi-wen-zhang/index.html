@@ -108,6 +108,8 @@ int main()
       
 
       
+        <div id="vlaine-comment"></div>
+      
 
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
   你是第inf位来吊打我的大佬
@@ -294,6 +296,23 @@ int main()
     //初始化
     initImg();
   </script>
+  
+    <script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: '',
+    appKey: '',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '评论现在有BUG，请勿评论',
+    visitor: true,
+    highlight: true,
+    recordIP: true,
+  })
+</script>
   
   
 </body>
