@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maguangxian.github.io</id>
     <title>QAQ</title>
-    <updated>2020-08-27T04:29:57.860Z</updated>
+    <updated>2020-08-27T04:33:50.075Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maguangxian.github.io"/>
     <link rel="self" href="https://maguangxian.github.io/atom.xml"/>
@@ -10,4 +10,123 @@
     <logo>https://maguangxian.github.io/images/avatar.png</logo>
     <icon>https://maguangxian.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, QAQ</rights>
+    <entry>
+        <title type="html"><![CDATA[测试文章]]></title>
+        <id>https://maguangxian.github.io/post/ce-shi-wen-zhang/</id>
+        <link href="https://maguangxian.github.io/post/ce-shi-wen-zhang/">
+        </link>
+        <updated>2020-08-27T04:31:59.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-cpp">#include &lt;set&gt;
+#include &lt;queue&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+const size_t Max_NK(105);
+const size_t Max_M(20050);
+size_t N;
+size_t K;
+unsigned int M;
+size_t Total;
+size_t S, T;
+unsigned int u, v, d;
+unsigned int Head[Max_NK];
+unsigned int To[Max_M];
+unsigned int Weight[Max_M];
+unsigned int Next[Max_M];
+unsigned int C[Max_NK];
+bool A[Max_NK][Max_NK];//A[i][j]ÈôÎªtrue±íÊ¾iÅÅ³âj 
+unsigned int Dist[Max_NK];
+bool In_Q[Max_NK];
+void Spfa()
+{
+    memset(Dist, 0X7F, sizeof(Dist));
+    queue&lt;unsigned int&gt; Q;
+    Q.push(S);
+    In_Q[S] = true;
+    Dist[S] = 0;
+    unsigned int Top;
+    while (Q.size())
+    {
+        Top = Q.front();
+        Q.pop();
+        In_Q[Top] = false;
+        for (size_t i = Head[Top];i;i = Next[i])
+            if (Dist[To[i]] &gt; Dist[Top] + Weight[i])
+            {
+                Dist[To[i]] = Dist[Top] + Weight[i];
+                if (!In_Q[To[i]])
+                {
+                    In_Q[To[i]] = true;
+                    Q.push(To[i]);
+                }
+            }
+    }
+}
+unsigned int Ans(0X7F7F7F7FU);
+bool Went[Max_NK];
+set&lt;unsigned int&gt; culture;
+bool check(const unsigned int &amp;cl)
+{
+    for (set&lt;unsigned int&gt;::const_iterator iter = culture.begin();
+        iter != culture.end();++iter)
+        if (A[*iter][cl])
+            return false;
+    return true;
+}
+void Dfs(const size_t &amp;Now, const unsigned int &amp;D)
+{
+    Went[Now] = true;
+    culture.insert(C[Now]);
+    if (Now == S)
+    {
+        Ans = min(Ans, D);
+        return;
+    }
+    if (D + Dist[Now] &gt; Ans)
+        return;
+    for (size_t i = Head[Now];i;i = Next[i])
+        if (!Went[To[i]] &amp;&amp; check(C[To[i]]))
+            Dfs(To[i], D + Weight[i]);
+    Went[Now] = false;
+    culture.erase(C[Now]);
+}
+int main()
+{
+    scanf(&quot;%u%u%u%u%u&quot;, &amp;N, &amp;K, &amp;M, &amp;S, &amp;T);
+    for (size_t i = 1;i &lt;= N;++i)
+        scanf(&quot;%u&quot;, C + i);
+    for (size_t i = 1;i &lt;= K;++i)
+        for (size_t j = 1;j &lt;= K;++j)
+            scanf(&quot;%d&quot;, &amp;A[i][j]);
+    while (M--)
+    {
+        scanf(&quot;%u%u%u&quot;, &amp;u, &amp;v, &amp;d);
+        ++Total;
+        To[Total] = v;
+        Weight[Total] = d;
+        Next[Total] = Head[u];
+        Head[u] = Total;
+        ++Total;
+        To[Total] = u;
+        Weight[Total] = d;
+        Next[Total] = Head[v];
+        Head[v] = Total;
+    }
+    Spfa();
+    if (Dist[T] == 0X7F7F7F7FU)
+    {
+        printf(&quot;-1&quot;);
+        return 0;
+    }
+    Dfs(T, 0);
+    if (Ans == 0X7F7F7F7FU)
+        printf(&quot;-1&quot;);
+    else
+        printf(&quot;%u&quot;, Ans);
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
 </feed>
