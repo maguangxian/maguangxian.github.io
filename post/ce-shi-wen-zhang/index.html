@@ -14,31 +14,31 @@
 
     
 
-  <meta name="description" content="#include &amp;lt;set&amp;gt;
-#include &amp;lt;queue&amp;gt;
-#include &amp;lt;cstdio&amp;gt;
-#include &amp;lt;cstring&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-..." />
+  <meta name="description" content="#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+int main()
+{
+    cout&amp;lt;&amp;lt;&amp;quot;Hello QAQ!&amp;quot;&amp;lt;&amp;lt;endl;
+    ..." />
   <meta property="og:title" content="测试文章 - QAQ">
-  <meta property="og:description" content="#include &amp;lt;set&amp;gt;
-#include &amp;lt;queue&amp;gt;
-#include &amp;lt;cstdio&amp;gt;
-#include &amp;lt;cstring&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-..." />
+  <meta property="og:description" content="#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+int main()
+{
+    cout&amp;lt;&amp;lt;&amp;quot;Hello QAQ!&amp;quot;&amp;lt;&amp;lt;endl;
+    ..." />
   <meta property="og:type" content="articles">
   <meta property="og:url" content="https://maguangxian.github.io/post/ce-shi-wen-zhang/" />
   <meta property="og:image" content="https://maguangxian.github.io/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
   <meta name="twitter:title" content="测试文章 - QAQ">
-  <meta name="twitter:description" content="#include &amp;lt;set&amp;gt;
-#include &amp;lt;queue&amp;gt;
-#include &amp;lt;cstdio&amp;gt;
-#include &amp;lt;cstring&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-...">
+  <meta name="twitter:description" content="#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+int main()
+{
+    cout&amp;lt;&amp;lt;&amp;quot;Hello QAQ!&amp;quot;&amp;lt;&amp;lt;endl;
+    ...">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://maguangxian.github.io/post/ce-shi-wen-zhang/">
 
@@ -66,121 +66,26 @@
         </h1>
         
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-08-27 · 3 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-08-27 · 1 min read</div>
           
         </div>
         <div class="markdown mb-8" v-pre>
-          <pre><code class="language-cpp">#include &lt;set&gt;
-#include &lt;queue&gt;
-#include &lt;cstdio&gt;
-#include &lt;cstring&gt;
-#include &lt;algorithm&gt;
+          <pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
-const size_t Max_NK(105);
-const size_t Max_M(20050);
-size_t N;
-size_t K;
-unsigned int M;
-size_t Total;
-size_t S, T;
-unsigned int u, v, d;
-unsigned int Head[Max_NK];
-unsigned int To[Max_M];
-unsigned int Weight[Max_M];
-unsigned int Next[Max_M];
-unsigned int C[Max_NK];
-bool A[Max_NK][Max_NK];//A[i][j]ÈôÎªtrue±íÊ¾iÅÅ³âj 
-unsigned int Dist[Max_NK];
-bool In_Q[Max_NK];
-void Spfa()
-{
-    memset(Dist, 0X7F, sizeof(Dist));
-    queue&lt;unsigned int&gt; Q;
-    Q.push(S);
-    In_Q[S] = true;
-    Dist[S] = 0;
-    unsigned int Top;
-    while (Q.size())
-    {
-        Top = Q.front();
-        Q.pop();
-        In_Q[Top] = false;
-        for (size_t i = Head[Top];i;i = Next[i])
-            if (Dist[To[i]] &gt; Dist[Top] + Weight[i])
-            {
-                Dist[To[i]] = Dist[Top] + Weight[i];
-                if (!In_Q[To[i]])
-                {
-                    In_Q[To[i]] = true;
-                    Q.push(To[i]);
-                }
-            }
-    }
-}
-unsigned int Ans(0X7F7F7F7FU);
-bool Went[Max_NK];
-set&lt;unsigned int&gt; culture;
-bool check(const unsigned int &amp;cl)
-{
-    for (set&lt;unsigned int&gt;::const_iterator iter = culture.begin();
-        iter != culture.end();++iter)
-        if (A[*iter][cl])
-            return false;
-    return true;
-}
-void Dfs(const size_t &amp;Now, const unsigned int &amp;D)
-{
-    Went[Now] = true;
-    culture.insert(C[Now]);
-    if (Now == S)
-    {
-        Ans = min(Ans, D);
-        return;
-    }
-    if (D + Dist[Now] &gt; Ans)
-        return;
-    for (size_t i = Head[Now];i;i = Next[i])
-        if (!Went[To[i]] &amp;&amp; check(C[To[i]]))
-            Dfs(To[i], D + Weight[i]);
-    Went[Now] = false;
-    culture.erase(C[Now]);
-}
 int main()
 {
-    scanf(&quot;%u%u%u%u%u&quot;, &amp;N, &amp;K, &amp;M, &amp;S, &amp;T);
-    for (size_t i = 1;i &lt;= N;++i)
-        scanf(&quot;%u&quot;, C + i);
-    for (size_t i = 1;i &lt;= K;++i)
-        for (size_t j = 1;j &lt;= K;++j)
-            scanf(&quot;%d&quot;, &amp;A[i][j]);
-    while (M--)
-    {
-        scanf(&quot;%u%u%u&quot;, &amp;u, &amp;v, &amp;d);
-        ++Total;
-        To[Total] = v;
-        Weight[Total] = d;
-        Next[Total] = Head[u];
-        Head[u] = Total;
-        ++Total;
-        To[Total] = u;
-        Weight[Total] = d;
-        Next[Total] = Head[v];
-        Head[v] = Total;
-    }
-    Spfa();
-    if (Dist[T] == 0X7F7F7F7FU)
-    {
-        printf(&quot;-1&quot;);
-        return 0;
-    }
-    Dfs(T, 0);
-    if (Ans == 0X7F7F7F7FU)
-        printf(&quot;-1&quot;);
-    else
-        printf(&quot;%u&quot;, Ans);
+    cout&lt;&lt;&quot;Hello QAQ!&quot;&lt;&lt;endl;
     return 0;
 }
 </code></pre>
+<h1 id="这是一级标题">这是一级标题</h1>
+<h3 id="这是三级标题">这是三级标题</h3>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2</li>
+<li>无序列表3<br>
+<s>QAQAQ</s></li>
+</ul>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -227,7 +132,15 @@ int main()
         </div>
       </div>
       <div class="post-toc-container">
-        
+        <ul class="markdownIt-TOC">
+<li><a href="#%E8%BF%99%E6%98%AF%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98">这是一级标题</a><br>
+*
+<ul>
+<li><a href="#%E8%BF%99%E6%98%AF%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98">这是三级标题</a></li>
+</ul>
+</li>
+</ul>
+
       </div>
     </div>
 
