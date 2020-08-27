@@ -201,6 +201,12 @@ int main()
       </div>
 
       
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
 
       
 
@@ -382,6 +388,28 @@ int main()
     initImg();
   </script>
   
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="application/javascript">
+
+  var gitalk = new Gitalk({
+    clientID: '50641b65dc2efca592a8',
+    clientSecret: '1c5c66d97701a60134cc723ecbde95bd3897efab  ',
+    repo: 'Gitalk',
+    owner: 'maguangxian',
+    admin: ['maguangxian'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+    
   
 </body>
 
