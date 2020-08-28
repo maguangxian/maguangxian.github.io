@@ -125,16 +125,16 @@ a:not([class]):hover {
 
 <script type="text/javascript">
 　　"model": { 
-　　　　jsonPath: "https://unpkg.com/live2d-widget-model-epsilon2_1r@1.0.5/assets/epsilon2_1.model.json",//这是插件模型，可以任意选择想要添加的2d动画
+　　　　jsonPath: "https://unpkg.com/live2d-widget-model-epsilon2_1r@1.0.5/assets/epsilon2_1.model.json",
 　　　　"scale": 1 
 　　},
 
     L2Dwidget.init({
       "display": {
         "superSample": 2,
-        "width": 200,//宽度
-        "height": 400,//高度
-        "position": "right",//位置，right,left
+        "width": 200,
+        "height": 400,
+        "position": "right",
         "hOffset": 0,
         "vOffset": 0
       }
