@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maguangxian.github.io</id>
     <title>QAQ</title>
-    <updated>2020-08-28T04:28:59.919Z</updated>
+    <updated>2020-08-28T04:36:16.359Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maguangxian.github.io"/>
     <link rel="self" href="https://maguangxian.github.io/atom.xml"/>
@@ -11,28 +11,39 @@
     <icon>https://maguangxian.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, QAQ</rights>
     <entry>
-        <title type="html"><![CDATA[测试文章]]></title>
-        <id>https://maguangxian.github.io/post/ce-shi-wen-zhang/</id>
-        <link href="https://maguangxian.github.io/post/ce-shi-wen-zhang/">
+        <title type="html"><![CDATA[我们为什么要写代码]]></title>
+        <id>https://maguangxian.github.io/post/whydowecode/</id>
+        <link href="https://maguangxian.github.io/post/whydowecode/">
         </link>
         <updated>2020-08-27T04:31:59.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()
-{
-    cout&lt;&lt;&quot;Hello QAQ!&quot;&lt;&lt;endl;
-    return 0;
-}
-</code></pre>
-<h1 id="这是一级标题">这是一级标题</h1>
-<h3 id="这是三级标题">这是三级标题</h3>
-<ul>
-<li>无序列表1</li>
-<li>无序列表2</li>
-<li>无序列表3<br>
-<s>QAQAQ</s><br>
-** 啊啊啊 **</li>
-</ul>
+        <content type="html"><![CDATA[<p>AC: Answer Correct</p>
+<p>正确的答案</p>
+<p>CE：Compile Easily</p>
+<p>轻松地通过编译</p>
+<p>PC：Past Compile</p>
+<p>通过编译</p>
+<p>WA：Wonderful Answer</p>
+<p>极好的答案</p>
+<p>RE：Right Enough</p>
+<p>太过正确</p>
+<p>TLE: Time Limit Enough</p>
+<p>时间充裕</p>
+<p>MLE: Memory Limit Enough</p>
+<p>内存充裕</p>
+<p>OLE：Output Limit Enough</p>
+<p>输出充裕</p>
+<p>UKE:Unknown Exactness</p>
+<p>不明情况地正确</p>
+<p>如果26个英文字母A<sub>Z分别等于1</sub>26。那么：</p>
+<p>Knowledge (知识)＝ 11+14+15+23+12+5+4+7+5=96%。</p>
+<p>Workhard (努力工作）＝ 23+15+18+11+8+1+18+4 =98%。</p>
+<p>也就是说知识和努力工作对我们人生的影响可以达到96％和98％。</p>
+<p>Luck（好运）＝12+21+3+11=47%。 Love（爱情）＝12+15+22+5=54%。 看来，这些我们通常认为重要的东西却并没起到最重要的作用。</p>
+<p>那么，什么可以决定我们100％的人生呢？ 是Money（金钱）吗？ 13+15+14+5+25=72%。 看来也不是。</p>
+<p>是Leadership (领导能力)吗？ 12+5+1+4+5+18+19+9+16=89% 还不是。</p>
+<p>金钱，权力也不能完全决定我们的生活。那是什么呢？ 其实，真正能使我们生活圆满的东西就在我们的代码里面！</p>
+<p>iostream=9+15+19+20+18+5+1+13=100%</p>
+<p>所以坚持写代码吧……</p>
 ]]></content>
     </entry>
 </feed>
