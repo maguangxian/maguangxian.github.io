@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maguangxian.github.io</id>
     <title>QAQ</title>
-    <updated>2020-08-28T03:17:57.494Z</updated>
+    <updated>2020-08-28T03:22:33.224Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maguangxian.github.io"/>
     <link rel="self" href="https://maguangxian.github.io/atom.xml"/>
@@ -30,7 +30,8 @@ int main()
 <li>无序列表1</li>
 <li>无序列表2</li>
 <li>无序列表3<br>
-<s>QAQAQ</s></li>
+<s>QAQAQ</s><br>
+** 啊啊啊 **</li>
 </ul>
 ]]></content>
     </entry>
