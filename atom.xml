@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maguangxian.github.io</id>
-    <title>QAQ</title>
-    <updated>2020-08-28T04:36:16.359Z</updated>
+    <title>QAQ😂</title>
+    <updated>2020-08-28T04:54:40.478Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maguangxian.github.io"/>
     <link rel="self" href="https://maguangxian.github.io/atom.xml"/>
-    <subtitle>一个蒟蒻</subtitle>
+    <subtitle>一个蒟蒻😂</subtitle>
     <logo>https://maguangxian.github.io/images/avatar.png</logo>
     <icon>https://maguangxian.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, QAQ</rights>
+    <rights>All rights reserved 2020, QAQ😂</rights>
     <entry>
         <title type="html"><![CDATA[我们为什么要写代码]]></title>
         <id>https://maguangxian.github.io/post/whydowecode/</id>
